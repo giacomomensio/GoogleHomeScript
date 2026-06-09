@@ -3,18 +3,28 @@ metadata:
   description: Condizionatore, Umidificatore e Deumidificatore
 
 automations:
-  # <46 condizionatore spento
+  # <46 condizionatore spento 85 75
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         lessThan: 46
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          lessThan: 46
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -109,22 +119,32 @@ automations:
         title: "Umidità <46% Cond. off"
         body: "Umid. 85% Deumid. 75%"
 
-  # <46 condizionatore acceso
+  # <46 condizionatore acceso 90 80 26C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         lessThan: 46
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          lessThan: 46
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 28C
+        thermostatTemperatureSetpoint: 26C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -219,18 +239,28 @@ automations:
         title: "Umidità <46% Cond. on"
         body: "Cond. 28° Umid. 90% Deumid. 80%"
 
-  # 46 condizionatore spento
+  # 46 condizionatore spento 80 70
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 46
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 46
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -325,22 +355,32 @@ automations:
         title: "Umidità 46% Cond. off"
         body: "Umid. 80% Deumid. 70%"
 
-  # 46 condizionatore acceso
+  # 46 condizionatore acceso 90 80 25C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 46
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 46
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 27C
+        thermostatTemperatureSetpoint: 25C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -435,18 +475,28 @@ automations:
         title: "Umidità 46% Cond. on"
         body: "Cond. 27° Umid. 90% Deumid. 80%"
 
-  # 47 condizionatore spento
+  # 47 condizionatore spento 75 65
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 47
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 47
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -541,22 +591,32 @@ automations:
         title: "Umidità 47% Cond. off"
         body: "Umid. 75% Deumid. 65%"
 
-  # 47 condizionatore acceso
+  # 47 condizionatore acceso 85 75 25C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 47
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 47
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 26C
+        thermostatTemperatureSetpoint: 25C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -651,18 +711,28 @@ automations:
         title: "Umidità 47% Cond. on"
         body: "Cond. 26° Umid. 85% Deumid. 75%"
 
-  # 48 condizionatore spento
+  # 48 condizionatore spento 70 60
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 48
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 48
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -746,22 +816,32 @@ automations:
         title: "Umidità 48% Cond. off"
         body: "Umid. 70% Deumid. 60%"
 
-  # 48 condizionatore acceso
+  # 48 condizionatore acceso 80 70 24C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 48
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 48
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 25C
+        thermostatTemperatureSetpoint: 24C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -856,18 +936,28 @@ automations:
         title: "Umidità 48% Cond. on"
         body: "Cond. 25° Umid. 80% Deumid. 70%"
 
-  # 49 condizionatore spento
+  # 49 condizionatore spento 65 75
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 49
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 49
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -962,18 +1052,28 @@ automations:
         title: "Umidità 49% Cond. off"
         body: "Umid. 65% Deumid. 55%"
 
-  # 49 condizionatore acceso
+  # 49 condizionatore acceso 75 65 24C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 49
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 49
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1070,20 +1170,30 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 49% Cond. on"
-        body: "Cond. 24° Umid. 75% Deumid. 66%"
+        body: "Cond. 24° Umid. 75% Deumid. 65%"
 
-  # 50 condizionatore spento
+  # 50 condizionatore spento 60 50
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 50
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 50
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -1178,18 +1288,28 @@ automations:
         title: "Umidità 50% Cond. off"
         body: "Umid. 60% Deumid. 50%"
 
-  # 50 condizionatore acceso
+  # 50 condizionatore acceso 70 60 23C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 50
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 50
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1288,22 +1408,32 @@ automations:
         title: "Umidità 50% Cond. on"
         body: "Cond. 23° Umid. 70% Deumid. 60%"
 
-  # 51 condizionatore spento
+  # 51 condizionatore spento 45 40
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 51
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 51
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
-        humidity: 50
+        humidity: 45
         devices: Umidificatore - Ufficio
 
       - type: device.command.OnOff
@@ -1392,20 +1522,30 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 51% Cond. off"
-        body: "Umid. 50% Deumid. 40%"
+        body: "Umid. 45% Deumid. 40%"
 
-  # 51 condizionatore acceso
+  # 51 condizionatore acceso 55 50 23C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 51
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 51
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1413,7 +1553,7 @@ automations:
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
-        humidity: 60
+        humidity: 55
         devices: Umidificatore - Ufficio
 
       - type: device.command.OnOff
@@ -1502,236 +1642,30 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 51% Cond. on"
-        body: "Cond. 23° Umid. 60% Deumid. 50%"
+        body: "Cond. 23° Umid. 55% Deumid. 50%"
 
-  # 52 condizionatore spento
+  # 52 condizionatore spento 40 35
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 52
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
-
-    actions:
-      - type: device.command.SetHumidity
-        humidity: 50
-        devices: Umidificatore - Ufficio
-
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: true
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: false
-    # 80
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #75
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #70
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #65
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #60
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #55
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #50
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #45
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #40
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #35
-
-      - type: home.command.Notification
-        title: "Umidità 52% Cond. off"
-        body: "Umid. 50% Deumid. 35%"
-
-  # 52 condizionatore acceso
-  - starters:
-      - type: device.state.HumiditySetting
-        state: humidityAmbientPercent
-        is: 52
-        device: Sensore T & H - Ufficio
-
-    condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
-
-    actions:
-      - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 22C
-        devices: Condizionatore - Ufficio
-
-      - type: device.command.SetHumidity
-        humidity: 55
-        devices: Umidificatore - Ufficio
-
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: true
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: false
-    # 80
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #75
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #70
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #65
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #60
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #55
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #50
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #45
-
-#      - type: time.delay
-#        for: 7sec
-#      - type: device.command.OnOff
-#        devices:
-#          - Ariston Meno - Ufficio
-#        on: true
-    #40
-
-#      - type: time.delay
-#        for: 7sec
-#      - type: device.command.OnOff
-#        devices:
-#          - Ariston Meno - Ufficio
-#        on: true
-    #35
-
-      - type: home.command.Notification
-        title: "Umidità 52% Cond. on"
-        body: "Cond. 22° Umid. 55% Deumid. 45%"
-
-  # >52 condizionatore spento
-  - starters:
-      - type: device.state.HumiditySetting
-        state: humidityAmbientPercent
-        greaterThan: 52
-        device: Sensore T & H - Ufficio
-
-    condition:
-      type: device.state.OnOff
-      state: on
-      is: false
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 52
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -1823,29 +1757,275 @@ automations:
     #35
 
       - type: home.command.Notification
-        title: "Umidità >52% Cond. off"
+        title: "Umidità 52% Cond. off"
         body: "Umid. 40% Deumid. 35%"
 
-  # >52 condizionatore acceso
+  # 52 condizionatore acceso 50 45 23C
+  - starters:
+      - type: device.state.HumiditySetting
+        state: humidityAmbientPercent
+        is: 52
+        device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
+
+    condition:
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          is: 52
+          device: Sensore T & H - Ufficio
+
+    actions:
+      - type: device.command.ThermostatTemperatureSetpoint
+        thermostatTemperatureSetpoint: 23C
+        devices: Condizionatore - Ufficio
+
+      - type: device.command.SetHumidity
+        humidity: 50
+        devices: Umidificatore - Ufficio
+
+      - type: device.command.OnOff
+        devices:
+          - Ariston Più - Ufficio
+        on: true
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Più - Ufficio
+        on: false
+    # 80
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #75
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #70
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #65
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #60
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #55
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #50
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #45
+
+#      - type: time.delay
+#        for: 7sec
+#      - type: device.command.OnOff
+#        devices:
+#          - Ariston Meno - Ufficio
+#        on: true
+    #40
+
+#      - type: time.delay
+#        for: 7sec
+#      - type: device.command.OnOff
+#        devices:
+#          - Ariston Meno - Ufficio
+#        on: true
+    #35
+
+      - type: home.command.Notification
+        title: "Umidità 52% Cond. on"
+        body: "Cond. 22° Umid. 50% Deumid. 45%"
+
+  # >52 condizionatore spento 35 35
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         greaterThan: 52
         device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: false
 
     condition:
-      type: device.state.OnOff
-      state: on
-      is: true
-      device: Condizionatore - Ufficio
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: false
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          greaterThan: 52
+          device: Sensore T & H - Ufficio
+
+    actions:
+      - type: device.command.SetHumidity
+        humidity: 35
+        devices: Umidificatore - Ufficio
+
+      - type: device.command.OnOff
+        devices:
+          - Ariston Più - Ufficio
+        on: true
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Più - Ufficio
+        on: false
+    # 80
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #75
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #70
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #65
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #60
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #55
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #50
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #45
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #40
+
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
+    #35
+
+      - type: home.command.Notification
+        title: "Umidità >52% Cond. off"
+        body: "Umid. 35% Deumid. 35%"
+
+  # >52 condizionatore acceso 45 40 23C
+  - starters:
+      - type: device.state.HumiditySetting
+        state: humidityAmbientPercent
+        greaterThan: 52
+        device: Sensore T & H - Ufficio
+      - type: device.state.OnOff
+        device: Condizionatore - Ufficio
+        state: on
+        is: true
+
+    condition:
+      type: and
+      conditions:
+        - type: device.state.OnOff
+          state: on
+          is: true
+          device: Condizionatore - Ufficio
+        - type: device.state.HumiditySetting
+          state: humidityAmbientPercent
+          greaterThan: 52
+          device: Sensore T & H - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 22C
+        thermostatTemperatureSetpoint: 23C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
-        humidity: 50
+        humidity: 45
         devices: Umidificatore - Ufficio
 
       - type: device.command.OnOff
@@ -1934,4 +2114,4 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità >52% Cond. on"
-        body: "Cond. 22° Umid. 50% Deumid. 40%"
+        body: "Cond. 22° Umid. 45% Deumid. 40%"
