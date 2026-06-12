@@ -738,6 +738,17 @@ automations:
       - type: device.command.SetHumidity
         humidity: 70
         devices: Umidificatore - Ufficio
+
+      - type: device.command.OnOff
+        devices:
+          - Ariston Più - Ufficio
+        on: true
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Più - Ufficio
+        on: false
     # 80
 
       - type: time.delay
