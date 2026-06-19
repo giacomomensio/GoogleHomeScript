@@ -8,7 +8,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         lessThan: 46
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -24,7 +24,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           lessThan: 46
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -124,7 +124,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         lessThan: 46
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -140,7 +140,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           lessThan: 46
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -244,7 +244,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 46
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -260,7 +260,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 46
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -360,7 +360,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 46
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -376,7 +376,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 46
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -480,7 +480,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 47
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -496,7 +496,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 47
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -596,7 +596,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 47
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -612,7 +612,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 47
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -716,7 +716,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 48
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -732,7 +732,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 48
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -832,7 +832,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 48
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -848,7 +848,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 48
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -952,7 +952,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 49
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -968,7 +968,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 49
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -1068,7 +1068,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 49
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1084,7 +1084,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 49
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1188,7 +1188,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 50
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1204,7 +1204,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 50
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -1304,7 +1304,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 50
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1320,7 +1320,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 50
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1424,7 +1424,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 51
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1440,7 +1440,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 51
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -1540,7 +1540,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 51
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1556,7 +1556,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 51
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1660,7 +1660,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 52
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1676,7 +1676,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 52
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -1776,7 +1776,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         is: 52
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1792,7 +1792,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           is: 52
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
@@ -1896,7 +1896,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         greaterThan: 52
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -1912,7 +1912,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           greaterThan: 52
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.SetHumidity
@@ -2012,7 +2012,7 @@ automations:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
         greaterThan: 52
-        device: Sensore T & H - Ufficio
+        device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
         state: on
@@ -2028,7 +2028,7 @@ automations:
         - type: device.state.HumiditySetting
           state: humidityAmbientPercent
           greaterThan: 52
-          device: Sensore T & H - Ufficio
+          device: humidity - Ufficio
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
