@@ -237,7 +237,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità <46% Cond. on"
-        body: "Cond. 28° Umid. 90% Deumid. 80%"
+        body: "Cond. 25° Umid. 90% Deumid. 80%"
 
   # 46 condizionatore spento 80 70
   - starters:
@@ -473,7 +473,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 46% Cond. on"
-        body: "Cond. 27° Umid. 90% Deumid. 80%"
+        body: "Cond. 24° Umid. 90% Deumid. 80%"
 
   # 47 condizionatore spento 75 65
   - starters:
@@ -709,7 +709,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 47% Cond. on"
-        body: "Cond. 26° Umid. 85% Deumid. 75%"
+        body: "Cond. 24° Umid. 85% Deumid. 75%"
 
   # 48 condizionatore spento 70 60
   - starters:
@@ -945,9 +945,9 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 48% Cond. on"
-        body: "Cond. 25° Umid. 80% Deumid. 70%"
+        body: "Cond. 23° Umid. 80% Deumid. 70%"
 
-  # 49 condizionatore spento 65 75
+  # 49 condizionatore spento 65 55
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -1181,7 +1181,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 49% Cond. on"
-        body: "Cond. 24° Umid. 75% Deumid. 65%"
+        body: "Cond. 23° Umid. 75% Deumid. 65%"
 
   # 50 condizionatore spento 60 50
   - starters:
@@ -1417,7 +1417,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 50% Cond. on"
-        body: "Cond. 23° Umid. 70% Deumid. 60%"
+        body: "Cond. 22° Umid. 70% Deumid. 60%"
 
   # 51 condizionatore spento 45 40
   - starters:
@@ -1653,7 +1653,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 51% Cond. on"
-        body: "Cond. 23° Umid. 55% Deumid. 50%"
+        body: "Cond. 22° Umid. 55% Deumid. 50%"
 
   # 52 condizionatore spento 40 35
   - starters:
@@ -1889,7 +1889,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 52% Cond. on"
-        body: "Cond. 22° Umid. 50% Deumid. 45%"
+        body: "Cond. 21° Umid. 50% Deumid. 45%"
 
   # >52 condizionatore spento 35 35
   - starters:
@@ -2125,4 +2125,4 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità >52% Cond. on"
-        body: "Cond. 22° Umid. 45% Deumid. 40%"
+        body: "Cond. 21° Umid. 45% Deumid. 40%"
