@@ -355,7 +355,7 @@ automations:
         title: "Umidità 46% Cond. off"
         body: "Umid. 80% Deumid. 70%"
 
-  # 46 condizionatore acceso 90 80 25C
+  # 46 condizionatore acceso 90 80 24C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -380,7 +380,7 @@ automations:
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 25C
+        thermostatTemperatureSetpoint: 24C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -827,7 +827,7 @@ automations:
         title: "Umidità 48% Cond. off"
         body: "Umid. 70% Deumid. 60%"
 
-  # 48 condizionatore acceso 80 70 24C
+  # 48 condizionatore acceso 80 70 23C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -852,7 +852,7 @@ automations:
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 24C
+        thermostatTemperatureSetpoint: 23C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -1299,7 +1299,7 @@ automations:
         title: "Umidità 50% Cond. off"
         body: "Umid. 60% Deumid. 50%"
 
-  # 50 condizionatore acceso 70 60 23C
+  # 50 condizionatore acceso 70 60 22C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -1324,7 +1324,7 @@ automations:
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 23C
+        thermostatTemperatureSetpoint: 22C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -1771,7 +1771,7 @@ automations:
         title: "Umidità 52% Cond. off"
         body: "Umid. 40% Deumid. 35%"
 
-  # 52 condizionatore acceso 50 45 22C
+  # 52 condizionatore acceso 50 45 21C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -1796,7 +1796,7 @@ automations:
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 22C
+        thermostatTemperatureSetpoint: 21C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
@@ -2007,7 +2007,7 @@ automations:
         title: "Umidità >52% Cond. off"
         body: "Umid. 35% Deumid. 35%"
 
-  # >52 condizionatore acceso 45 40 22C
+  # >52 condizionatore acceso 45 40 21C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -2032,7 +2032,7 @@ automations:
 
     actions:
       - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 22C
+        thermostatTemperatureSetpoint: 21C
         devices: Condizionatore - Ufficio
 
       - type: device.command.SetHumidity
