@@ -1183,7 +1183,7 @@ automations:
         title: "Umidità 49% Cond. on"
         body: "Cond. 23° Umid. 75% Deumid. 65%"
 
-  # 50 condizionatore spento 60 50
+  # 50 condizionatore spento 55 45
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -1208,7 +1208,7 @@ automations:
 
     actions:
       - type: device.command.SetHumidity
-        humidity: 60
+        humidity: 55
         devices: Umidificatore - Ufficio
 
       - type: device.command.OnOff
@@ -1271,12 +1271,12 @@ automations:
         on: true
     #50
 
-#      - type: time.delay
-#        for: 7sec
-#      - type: device.command.OnOff
-#        devices:
-#          - Ariston Meno - Ufficio
-#        on: true
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
     #45
 
 #      - type: time.delay
@@ -1297,7 +1297,7 @@ automations:
 
       - type: home.command.Notification
         title: "Umidità 50% Cond. off"
-        body: "Umid. 60% Deumid. 50%"
+        body: "Umid. 55% Deumid. 45%"
 
   # 50 condizionatore acceso 65 60 22C
   - starters:
@@ -1419,7 +1419,7 @@ automations:
         title: "Umidità 50% Cond. on"
         body: "Cond. 22° Umid. 65% Deumid. 60%"
 
-  # 51 condizionatore spento 45 40
+  # 51 condizionatore spento 40 35
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
@@ -1444,7 +1444,7 @@ automations:
 
     actions:
       - type: device.command.SetHumidity
-        humidity: 45
+        humidity: 40
         devices: Umidificatore - Ufficio
 
       - type: device.command.OnOff
@@ -1523,17 +1523,17 @@ automations:
         on: true
     #40
 
-#      - type: time.delay
-#        for: 7sec
-#      - type: device.command.OnOff
-#        devices:
-#          - Ariston Meno - Ufficio
-#        on: true
+      - type: time.delay
+        for: 7sec
+      - type: device.command.OnOff
+        devices:
+          - Ariston Meno - Ufficio
+        on: true
     #35
 
       - type: home.command.Notification
         title: "Umidità 51% Cond. off"
-        body: "Umid. 45% Deumid. 40%"
+        body: "Umid. 40% Deumid. 35%"
 
   # 51 condizionatore acceso 50 50 22C
   - starters:
@@ -1655,11 +1655,11 @@ automations:
         title: "Umidità 51% Cond. on"
         body: "Cond. 22° Umid. 50% Deumid. 50%"
 
-  # 52 condizionatore spento 40 35
+  # >51 condizionatore spento 35 35
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
-        is: 52
+        greaterThan: 51
         device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
@@ -1680,7 +1680,7 @@ automations:
 
     actions:
       - type: device.command.SetHumidity
-        humidity: 40
+        humidity: 35
         devices: Umidificatore - Ufficio
 
       - type: device.command.OnOff
@@ -1768,14 +1768,14 @@ automations:
     #35
 
       - type: home.command.Notification
-        title: "Umidità 52% Cond. off"
-        body: "Umid. 40% Deumid. 35%"
+        title: "Umidità >51% Cond. off"
+        body: "Umid. 35% Deumid. 35%"
 
-  # 52 condizionatore acceso 45 45 21C
+  # >51 condizionatore acceso 45 45 21C
   - starters:
       - type: device.state.HumiditySetting
         state: humidityAmbientPercent
-        is: 52
+        greaterThan: 51
         device: humidity - Ufficio
       - type: device.state.OnOff
         device: Condizionatore - Ufficio
@@ -1890,239 +1890,3 @@ automations:
       - type: home.command.Notification
         title: "Umidità 52% Cond. on"
         body: "Cond. 21° Umid. 45% Deumid. 45%"
-
-  # >52 condizionatore spento 35 35
-  - starters:
-      - type: device.state.HumiditySetting
-        state: humidityAmbientPercent
-        greaterThan: 52
-        device: humidity - Ufficio
-      - type: device.state.OnOff
-        device: Condizionatore - Ufficio
-        state: on
-        is: false
-
-    condition:
-      type: and
-      conditions:
-        - type: device.state.OnOff
-          state: on
-          is: false
-          device: Condizionatore - Ufficio
-        - type: device.state.HumiditySetting
-          state: humidityAmbientPercent
-          greaterThan: 52
-          device: humidity - Ufficio
-
-    actions:
-      - type: device.command.SetHumidity
-        humidity: 35
-        devices: Umidificatore - Ufficio
-
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: true
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: false
-    # 80
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #75
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #70
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #65
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #60
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #55
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #50
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #45
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #40
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #35
-
-      - type: home.command.Notification
-        title: "Umidità >52% Cond. off"
-        body: "Umid. 35% Deumid. 35%"
-
-  # >52 condizionatore acceso 40 40 21C
-  - starters:
-      - type: device.state.HumiditySetting
-        state: humidityAmbientPercent
-        greaterThan: 52
-        device: humidity - Ufficio
-      - type: device.state.OnOff
-        device: Condizionatore - Ufficio
-        state: on
-        is: true
-
-    condition:
-      type: and
-      conditions:
-        - type: device.state.OnOff
-          state: on
-          is: true
-          device: Condizionatore - Ufficio
-        - type: device.state.HumiditySetting
-          state: humidityAmbientPercent
-          greaterThan: 52
-          device: humidity - Ufficio
-
-    actions:
-      - type: device.command.ThermostatTemperatureSetpoint
-        thermostatTemperatureSetpoint: 21C
-        devices: Condizionatore - Ufficio
-
-      - type: device.command.SetHumidity
-        humidity: 40
-        devices: Umidificatore - Ufficio
-
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: true
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Più - Ufficio
-        on: false
-    # 80
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #75
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #70
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #65
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #60
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #55
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #50
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #45
-
-      - type: time.delay
-        for: 7sec
-      - type: device.command.OnOff
-        devices:
-          - Ariston Meno - Ufficio
-        on: true
-    #40
-
-#      - type: time.delay
-#        for: 7sec
-#      - type: device.command.OnOff
-#        devices:
-#          - Ariston Meno - Ufficio
-#        on: true
-    #35
-
-      - type: home.command.Notification
-        title: "Umidità >52% Cond. on"
-        body: "Cond. 21° Umid. 40% Deumid. 40%"
